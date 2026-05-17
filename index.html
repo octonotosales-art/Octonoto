@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCTO NOTO CO., LTD. | Global Sourcing & Strategic Trading</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#1E2A3A',
+                        'navy-light': '#2A3B50',
+                        gold: '#D4AF37',
+                        'gold-light': '#E5C158',
+                        'pastel-blue': '#A3C4D8',
+                        'soft-gray': '#F8F9FA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Prompt', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'hover': '0 10px 30px -5px rgba(0, 0, 0, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="text-gray-800 font-sans antialiased" style="background-image: url('bg-pattern.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <img src="logo.png" alt="OCTO NOTO Logo" class="h-10 w-auto object-contain">
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-navy font-medium transition-colors" data-i18n="nav_home">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-navy font-medium transition-colors" data-i18n="nav_about">About Us</a>
+                    <a href="#products" class="nav-link text-gray-600 hover:text-navy font-medium transition-colors" data-i18n="nav_products">Products & Services</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-navy font-medium transition-colors" data-i18n="nav_contact">Contact Us</a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center bg-gray-100 rounded-full p-1 border border-gray-200">
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all active-lang" data-lang="en">EN</button>
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all text-gray-500" data-lang="th">TH</button>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-navy focus:outline-none">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy hover:bg-gray-50" data-i18n="nav_home">Home</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy hover:bg-gray-50" data-i18n="nav_about">About Us</a>
+                <a href="#products" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy hover:bg-gray-50" data-i18n="nav_products">Products & Services</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-navy hover:bg-gray-50" data-i18n="nav_contact">Contact Us</a>
+                <div class="px-3 py-2 flex items-center space-x-2">
+                    <span class="text-sm font-medium text-gray-500">Language:</span>
+                    <button class="lang-btn-mobile text-sm font-semibold text-navy" data-lang="en">EN</button>
+                    <span class="text-gray-300">|</span>
+                    <button class="lang-btn-mobile text-sm font-semibold text-gray-500" data-lang="th">TH</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-white/80 backdrop-blur-md">
+        <!-- Decorative background elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-pastel-blue opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-gold opacity-10 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="max-w-3xl animate-fade-in-up">
+                <span class="inline-block py-1 px-3 rounded-full bg-navy/5 text-navy font-semibold text-sm mb-6 tracking-wide uppercase border border-navy/10 shadow-sm">OCTO NOTO CO., LTD.</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight mb-6" data-i18n="hero_headline">
+                    Global Sourcing & Strategic Trading Solutions
+                </h1>
+                <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl" data-i18n="hero_subhead">
+                    Import, Export, and Domestic Industrial Solutions. Connecting businesses with high-quality global supply chains.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-navy hover:bg-navy-light md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1" data-i18n="hero_cta">
+                        Explore Our Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white/90 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-gold font-semibold tracking-wide uppercase">About Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-navy sm:text-4xl" data-i18n="about_title">
+                    About OCTO NOTO
+                </p>
+                <p class="mt-4 max-w-2xl text-lg text-gray-500 mx-auto" data-i18n="about_desc">
+                    A premier Thai-based trading house specializing in technical sourcing, quality control, and international supply chain management. We act as a strategic partner to ensure our clients get the right product for their specific application.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Value 1 -->
+                    <div class="pt-6 group">
+                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                            <div class="-mt-6">
+                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                    <i data-lucide="search" class="text-white w-6 h-6"></i>
+                                </div>
+                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_1_title">Technical Sourcing</h3>
+                                <p class="mt-3 text-base text-gray-500" data-i18n="val_1_desc">
+                                    Consultation to find the exact match.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="pt-6 group">
+                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                            <div class="-mt-6">
+                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                    <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
+                                </div>
+                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_2_title">Quality First</h3>
+                                <p class="mt-3 text-base text-gray-500" data-i18n="val_2_desc">
+                                    Rigorous supplier vetting and quality control.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="pt-6 group">
+                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                            <div class="-mt-6">
+                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                    <i data-lucide="handshake" class="text-white w-6 h-6"></i>
+                                </div>
+                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_3_title">Strategic Partner</h3>
+                                <p class="mt-3 text-base text-gray-500" data-i18n="val_3_desc">
+                                    Long-term value, reliability, and transparent pricing.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Services Section -->
+    <section id="products" class="py-20 bg-soft-gray/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-gold font-semibold tracking-wide uppercase">Our Offerings</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-navy sm:text-4xl" data-i18n="prod_title">
+                    Products & Services
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="package"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_1">Anti-Rust Packaging (VCI) & ESD Materials</h4>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="box"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_2">Packing Materials & Cartons</h4>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="disc"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_3">Industrial O-Rings, Gaskets, & Seals</h4>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_4">Wire Harnesses, Power Cords, & EV Chargers</h4>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="flask-conical"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_5">Industrial & Lab Chemicals</h4>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
+                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
+                        <i data-lucide="settings"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_6">Designed Screws & Connectors</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-navy/95 backdrop-blur-md text-white relative overflow-hidden border-t border-white/10">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gold opacity-10 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-pastel-blue opacity-10 blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-base text-gold font-semibold tracking-wide uppercase" data-i18n="contact_title">Contact Us</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                    Get In Touch
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+                
+                <!-- Left: Contact Info -->
+                <div class="p-10 lg:w-1/2 flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold mb-8 text-gold" data-i18n="contact_company">OCTO NOTO CO., LTD.</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="map-pin" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-lg text-gray-300 leading-relaxed" data-i18n="contact_address">
+                                    My Office, Room 2018, 2nd Floor 2823/3 Charoen Krung Road, Bang Kho Laem, Bangkok 10120, Thailand
+                                </p>
+                                <a href="https://maps.app.goo.gl/ggXbhMrnxeo42jDo6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-pastel-blue hover:text-white transition-colors text-sm font-medium">
+                                    <span data-i18n="open_maps">Open in Google Maps</span>
+                                    <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="smartphone" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4 text-lg text-gray-300">
+                                +66 64 262 4178
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="phone" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4 text-lg text-gray-300">
+                                +66 2 292 2000
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="mail" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4 text-lg text-gray-300 space-y-1">
+                                <div><a href="mailto:sales@octonoto.com" class="hover:text-gold transition-colors">sales@octonoto.com</a></div>
+                                <div><a href="mailto:octonotosales@gmail.com" class="hover:text-gold transition-colors">octonotosales@gmail.com</a></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i data-lucide="message-circle" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4 flex flex-col text-lg text-gray-300">
+                                <div>LINE Official: <span class="text-gold font-medium hover:text-gold-light cursor-pointer transition-colors">@585mnerr</span></div>
+                                <img src="line-qr.jpg" alt="LINE QR Code @585mnerr" class="w-32 h-32 mt-3 rounded-xl border-4 border-white shadow-lg object-contain bg-white hover:scale-105 transition-transform duration-300">
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0">
+                                <i data-lucide="file-text" class="text-pastel-blue"></i>
+                            </div>
+                            <div class="ml-4 text-lg text-gray-300">
+                                Tax ID: 0105569088996
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="lg:w-1/2 min-h-[400px] bg-white relative p-8 lg:p-10 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-white/10 rounded-b-3xl lg:rounded-bl-none lg:rounded-r-3xl">
+                    <form id="contact-form" class="space-y-4">
+                        <input type="hidden" name="access_key" value="6da54897-d2b4-43b6-9a87-cffd19a9fb50">
+                        <input type="hidden" name="subject" value="New Submission from OCTO NOTO Landing Page">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        
+                        <!-- Validation Message -->
+                        <div id="form-validation-msg" class="hidden text-red-500 text-sm mb-4 font-medium transition-opacity duration-300" data-i18n="form_validation">
+                            Please fill out all required fields.
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_name_label">Full Name <span class="text-red-500">*</span></label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_name_placeholder">
+                            </div>
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_company_label">Company Name</label>
+                                <input type="text" name="company" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_company_placeholder">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_email_label">Email Address <span class="text-red-500">*</span></label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_email_placeholder">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_phone_label">Phone Number</label>
+                                <input type="tel" name="phone" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_phone_placeholder">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject-field" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_subject_label">Subject</label>
+                            <input type="text" name="subject_inquiry" id="subject-field" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_subject_placeholder">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_message_label">Message / Inquiry <span class="text-red-500">*</span></label>
+                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800 resize-none" data-i18n="form_message_placeholder"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2 mt-2">
+                            <span data-i18n="form_submit">Send Message</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success State -->
+                    <div id="form-success-state" class="hidden h-full flex-col items-center justify-center text-center animate-fade-in-up py-10">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                            <i data-lucide="check-circle" class="text-green-600 w-8 h-8"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-navy mb-2">Success!</h4>
+                        <p class="text-gray-600 text-lg" data-i18n="form_success">Thank you! Your message has been sent successfully. Our team will contact you shortly.</p>
+                        <button id="reset-form-btn" class="mt-8 px-6 py-2 border border-navy text-navy rounded-lg hover:bg-navy hover:text-white transition-colors">
+                            Send Another Message
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="mt-12 bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 shadow-2xl p-2 h-96 lg:h-[400px]">
+                <iframe 
+                    src="https://maps.google.com/maps?q=2823/3%20Charoen%20Krung%20Road,%20Bang%20Kho%20Laem,%20Bangkok%2010120&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; border-radius: 1.25rem;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#151D2A] py-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 bg-white/90 p-2 rounded-lg">
+                <img src="logo.png" alt="OCTO NOTO Logo" class="h-8 w-auto object-contain">
+            </div>
+            <p class="text-gray-400 text-sm" data-i18n="footer_copy">
+                &copy; 2026 OCTO NOTO CO., LTD. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

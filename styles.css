@@ -1,0 +1,44 @@
+/* Custom CSS to complement Tailwind */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar active states and styling */
+.active-lang {
+    background-color: #1E2A3A;
+    color: white !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.scrolled-nav {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Language specific font adjustments */
+.lang-th {
+    font-family: 'Prompt', sans-serif !important;
+}
+
+.lang-en {
+    font-family: 'Inter', sans-serif !important;
+}
