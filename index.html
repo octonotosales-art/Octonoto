@@ -17,19 +17,24 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1E2A3A',
-                        'navy-light': '#2A3B50',
+                        slate: {
+                            50: '#f8fafc',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        navy: '#0B1B3D',
+                        'navy-light': '#1A2F5A',
                         gold: '#D4AF37',
                         'gold-light': '#E5C158',
-                        'pastel-blue': '#A3C4D8',
-                        'soft-gray': '#F8F9FA'
+                        accent: '#3B82F6'
                     },
                     fontFamily: {
                         sans: ['Inter', 'Prompt', 'sans-serif'],
                     },
                     boxShadow: {
                         'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
-                        'hover': '0 10px 30px -5px rgba(0, 0, 0, 0.08)'
+                        'hover': '0 20px 40px -5px rgba(0, 0, 0, 0.1)',
+                        'premium': '0 10px 30px -5px rgba(0, 0, 0, 0.2)'
                     }
                 }
             }
@@ -42,9 +47,9 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="text-gray-800 font-sans antialiased" style="background-image: url('bg-pattern.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+<body class="text-slate-800 font-sans antialiased bg-slate-50">
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -93,22 +98,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-white/80 backdrop-blur-md">
-        <!-- Decorative background elements -->
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-pastel-blue opacity-20 blur-3xl"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-gold opacity-10 blur-3xl"></div>
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex items-center min-h-[90vh] bg-slate-900" style="background-image: url('modern-bg.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <!-- Overlays for better text contrast -->
+        <div class="absolute inset-0 bg-slate-900/70 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/50 via-transparent to-slate-50"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="max-w-3xl animate-fade-in-up">
-                <span class="inline-block py-1 px-3 rounded-full bg-navy/5 text-navy font-semibold text-sm mb-6 tracking-wide uppercase border border-navy/10 shadow-sm">OCTO NOTO CO., LTD.</span>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-navy leading-tight mb-6" data-i18n="hero_headline">
-                    Global Sourcing & Strategic Trading Solutions
+                <span class="inline-block py-1 px-3 rounded-full bg-gold/10 text-gold font-semibold text-sm mb-6 tracking-wider uppercase border border-gold/20 shadow-sm backdrop-blur-sm">OCTO NOTO CO., LTD.</span>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 tracking-tight" data-i18n="hero_headline">
+                    Global Sourcing & <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-gold-light">Strategic Trading</span>
                 </h1>
-                <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-2xl" data-i18n="hero_subhead">
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light" data-i18n="hero_subhead">
                     Import, Export, and Domestic Industrial Solutions. Connecting businesses with high-quality global supply chains.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#products" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-medium rounded-md text-white bg-navy hover:bg-navy-light md:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1" data-i18n="hero_cta">
+                    <a href="#products" class="inline-flex justify-center items-center px-8 py-4 border border-transparent text-base font-semibold rounded-lg text-slate-900 bg-gradient-to-r from-gold to-gold-light hover:from-gold-light hover:to-white md:text-lg transition-all duration-300 shadow-premium hover:-translate-y-1" data-i18n="hero_cta">
                         Explore Our Solutions
                     </a>
                 </div>
@@ -134,12 +139,12 @@
                     
                     <!-- Value 1 -->
                     <div class="pt-6 group">
-                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                        <div class="flow-root bg-white rounded-xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-premium hover:-translate-y-2 border border-slate-200">
                             <div class="-mt-6">
-                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                <div class="inline-flex items-center justify-center p-3 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg group-hover:from-gold group-hover:to-gold-light transition-all duration-300">
                                     <i data-lucide="search" class="text-white w-6 h-6"></i>
                                 </div>
-                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_1_title">Technical Sourcing</h3>
+                                <h3 class="mt-8 text-xl font-bold text-slate-900 tracking-tight" data-i18n="val_1_title">Technical Sourcing</h3>
                                 <p class="mt-3 text-base text-gray-500" data-i18n="val_1_desc">
                                     Consultation to find the exact match.
                                 </p>
@@ -149,12 +154,12 @@
 
                     <!-- Value 2 -->
                     <div class="pt-6 group">
-                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                        <div class="flow-root bg-white rounded-xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-premium hover:-translate-y-2 border border-slate-200">
                             <div class="-mt-6">
-                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                <div class="inline-flex items-center justify-center p-3 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg group-hover:from-gold group-hover:to-gold-light transition-all duration-300">
                                     <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
                                 </div>
-                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_2_title">Quality First</h3>
+                                <h3 class="mt-8 text-xl font-bold text-slate-900 tracking-tight" data-i18n="val_2_title">Quality First</h3>
                                 <p class="mt-3 text-base text-gray-500" data-i18n="val_2_desc">
                                     Rigorous supplier vetting and quality control.
                                 </p>
@@ -164,12 +169,12 @@
 
                     <!-- Value 3 -->
                     <div class="pt-6 group">
-                        <div class="flow-root bg-soft-gray rounded-2xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-hover hover:-translate-y-2 border border-gray-100">
+                        <div class="flow-root bg-white rounded-xl px-6 pb-8 h-full transition-all duration-300 hover:shadow-premium hover:-translate-y-2 border border-slate-200">
                             <div class="-mt-6">
-                                <div class="inline-flex items-center justify-center p-3 bg-navy rounded-xl shadow-lg group-hover:bg-gold transition-colors duration-300">
+                                <div class="inline-flex items-center justify-center p-3 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl shadow-lg group-hover:from-gold group-hover:to-gold-light transition-all duration-300">
                                     <i data-lucide="handshake" class="text-white w-6 h-6"></i>
                                 </div>
-                                <h3 class="mt-8 text-xl font-bold text-gray-900 tracking-tight" data-i18n="val_3_title">Strategic Partner</h3>
+                                <h3 class="mt-8 text-xl font-bold text-slate-900 tracking-tight" data-i18n="val_3_title">Strategic Partner</h3>
                                 <p class="mt-3 text-base text-gray-500" data-i18n="val_3_desc">
                                     Long-term value, reliability, and transparent pricing.
                                 </p>
@@ -183,83 +188,86 @@
     </section>
 
     <!-- Products & Services Section -->
-    <section id="products" class="py-20 bg-soft-gray/80 backdrop-blur-md">
+    <section id="products" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-base text-gold font-semibold tracking-wide uppercase">Our Offerings</h2>
-                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-navy sm:text-4xl" data-i18n="prod_title">
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-slate-900 sm:text-4xl" data-i18n="prod_title">
                     Products & Services
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="package"></i>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Group 1: Industrial -->
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col transition-all duration-300">
+                    <div class="h-64 w-full relative overflow-hidden group cursor-pointer" onclick="document.getElementById('industrial-items').classList.toggle('hidden')">
+                        <img src="industrial-cover.png" alt="Industrial Solutions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-colors flex items-center justify-center">
+                            <h3 class="text-3xl font-bold text-white tracking-wide" data-i18n="prod_group_industrial">Industrial Solutions</h3>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_1">Anti-Rust Packaging (VCI) & ESD Materials</h4>
+                    <!-- Industrial Items -->
+                    <div id="industrial-items" class="p-6 hidden bg-white">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Product 1 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="package" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_1">Anti-Rust Packaging (VCI) & ESD Materials</h4>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="box" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_2">Packing Materials & Cartons</h4>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="disc" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_3">Industrial O-Rings, Gaskets, & Seals</h4>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="zap" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_4">Wire Harnesses, Power Cords, & EV Chargers</h4>
+                            </div>
+                            <!-- Product 5 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="flask-conical" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_5">Industrial & Lab Chemicals</h4>
+                            </div>
+                            <!-- Product 6 -->
+                            <div class="p-4 border border-slate-100 rounded-lg hover:border-gold transition-colors flex items-start gap-3 group">
+                                <div class="text-slate-900 group-hover:text-gold transition-colors shrink-0">
+                                    <i data-lucide="settings" class="w-5 h-5"></i>
+                                </div>
+                                <h4 class="text-sm font-bold text-slate-900 group-hover:text-gold transition-colors" data-i18n="prod_6">Designed Screws & Connectors</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="box"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_2">Packing Materials & Cartons</h4>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="disc"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_3">Industrial O-Rings, Gaskets, & Seals</h4>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="zap"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_4">Wire Harnesses, Power Cords, & EV Chargers</h4>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="flask-conical"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_5">Industrial & Lab Chemicals</h4>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-hover transition-all duration-300 hover:-translate-y-1 flex items-start gap-4">
-                    <div class="bg-pastel-blue/20 p-3 rounded-lg text-navy shrink-0">
-                        <i data-lucide="settings"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-gray-900" data-i18n="prod_6">Designed Screws & Connectors</h4>
-                    </div>
+                <!-- Group 2: Inhouse Brand -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col transition-all duration-300 hover:shadow-premium">
+                    <a href="#" class="w-full h-full relative group block p-8 flex items-center justify-center min-h-[16rem]">
+                        <img src="inhouse-brand.jpg" alt="The White Ivory Inhouse Brand" class="w-full max-h-80 object-contain transition-transform duration-500 group-hover:scale-105">
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-navy/95 backdrop-blur-md text-white relative overflow-hidden border-t border-white/10">
+    <section id="contact" class="py-20 bg-slate-900 backdrop-blur-md text-white relative overflow-hidden border-t border-white/10">
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-gold opacity-10 blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-pastel-blue opacity-10 blur-3xl pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -278,13 +286,13 @@
                     <div class="space-y-6">
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
-                                <i data-lucide="map-pin" class="text-pastel-blue"></i>
+                                <i data-lucide="map-pin" class="text-gold"></i>
                             </div>
                             <div class="ml-4">
                                 <p class="text-lg text-gray-300 leading-relaxed" data-i18n="contact_address">
-                                    My Office, Room 2018, 2nd Floor 2823/3 Charoen Krung Road, Bang Kho Laem, Bangkok 10120, Thailand
+                                    88/206 Grande Pleno Suksawat-Rama 3, Pracha Uthit 54, Thung Khru District, Bangkok 10140, Thailand
                                 </p>
-                                <a href="https://maps.app.goo.gl/ggXbhMrnxeo42jDo6" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-pastel-blue hover:text-white transition-colors text-sm font-medium">
+                                <a href="https://maps.app.goo.gl/jbrEDKuJkbE7n7KQA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center mt-2 text-gold hover:text-white transition-colors text-sm font-medium">
                                     <span data-i18n="open_maps">Open in Google Maps</span>
                                     <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
                                 </a>
@@ -293,7 +301,7 @@
 
                         <div class="flex items-center">
                             <div class="flex-shrink-0">
-                                <i data-lucide="smartphone" class="text-pastel-blue"></i>
+                                <i data-lucide="smartphone" class="text-gold"></i>
                             </div>
                             <div class="ml-4 text-lg text-gray-300">
                                 +66 64 262 4178
@@ -302,7 +310,7 @@
 
                         <div class="flex items-center">
                             <div class="flex-shrink-0">
-                                <i data-lucide="phone" class="text-pastel-blue"></i>
+                                <i data-lucide="phone" class="text-gold"></i>
                             </div>
                             <div class="ml-4 text-lg text-gray-300">
                                 +66 2 292 2000
@@ -311,7 +319,7 @@
 
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
-                                <i data-lucide="mail" class="text-pastel-blue"></i>
+                                <i data-lucide="mail" class="text-gold"></i>
                             </div>
                             <div class="ml-4 text-lg text-gray-300 space-y-1">
                                 <div><a href="mailto:sales@octonoto.com" class="hover:text-gold transition-colors">sales@octonoto.com</a></div>
@@ -321,7 +329,7 @@
 
                         <div class="flex items-start">
                             <div class="flex-shrink-0 mt-1">
-                                <i data-lucide="message-circle" class="text-pastel-blue"></i>
+                                <i data-lucide="message-circle" class="text-gold"></i>
                             </div>
                             <div class="ml-4 flex flex-col text-lg text-gray-300">
                                 <div>LINE Official: <span class="text-gold font-medium hover:text-gold-light cursor-pointer transition-colors">@585mnerr</span></div>
@@ -331,7 +339,7 @@
 
                         <div class="flex items-center">
                             <div class="flex-shrink-0">
-                                <i data-lucide="file-text" class="text-pastel-blue"></i>
+                                <i data-lucide="file-text" class="text-gold"></i>
                             </div>
                             <div class="ml-4 text-lg text-gray-300">
                                 Tax ID: 0105569088996
@@ -355,36 +363,36 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_name_label">Full Name <span class="text-red-500">*</span></label>
-                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_name_placeholder">
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800" data-i18n="form_name_placeholder">
                             </div>
                             <div>
                                 <label for="company" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_company_label">Company Name</label>
-                                <input type="text" name="company" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_company_placeholder">
+                                <input type="text" name="company" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800" data-i18n="form_company_placeholder">
                             </div>
                         </div>
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_email_label">Email Address <span class="text-red-500">*</span></label>
-                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_email_placeholder">
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800" data-i18n="form_email_placeholder">
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_phone_label">Phone Number</label>
-                                <input type="tel" name="phone" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_phone_placeholder">
+                                <input type="tel" name="phone" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800" data-i18n="form_phone_placeholder">
                             </div>
                         </div>
 
                         <div>
                             <label for="subject-field" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_subject_label">Subject</label>
-                            <input type="text" name="subject_inquiry" id="subject-field" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800" data-i18n="form_subject_placeholder">
+                            <input type="text" name="subject_inquiry" id="subject-field" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800" data-i18n="form_subject_placeholder">
                         </div>
 
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-1" data-i18n="form_message_label">Message / Inquiry <span class="text-red-500">*</span></label>
-                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pastel-blue focus:border-pastel-blue outline-none transition-colors text-gray-800 resize-none" data-i18n="form_message_placeholder"></textarea>
+                            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold focus:border-gold outline-none transition-colors text-slate-800 resize-none" data-i18n="form_message_placeholder"></textarea>
                         </div>
 
-                        <button type="submit" id="submit-btn" class="w-full bg-navy hover:bg-navy-light text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2 mt-2">
+                        <button type="submit" id="submit-btn" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex justify-center items-center gap-2 mt-2">
                             <span data-i18n="form_submit">Send Message</span>
                             <i data-lucide="send" class="w-4 h-4"></i>
                         </button>
@@ -395,9 +403,9 @@
                         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                             <i data-lucide="check-circle" class="text-green-600 w-8 h-8"></i>
                         </div>
-                        <h4 class="text-2xl font-bold text-navy mb-2">Success!</h4>
+                        <h4 class="text-2xl font-bold text-slate-900 mb-2">Success!</h4>
                         <p class="text-gray-600 text-lg" data-i18n="form_success">Thank you! Your message has been sent successfully. Our team will contact you shortly.</p>
-                        <button id="reset-form-btn" class="mt-8 px-6 py-2 border border-navy text-navy rounded-lg hover:bg-navy hover:text-white transition-colors">
+                        <button id="reset-form-btn" class="mt-8 px-6 py-2 border border-slate-900 text-slate-900 rounded-lg hover:bg-slate-900 hover:text-white transition-colors">
                             Send Another Message
                         </button>
                     </div>
@@ -407,7 +415,7 @@
             <!-- Google Map Embed -->
             <div class="mt-12 bg-white/5 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 shadow-2xl p-2 h-96 lg:h-[400px]">
                 <iframe 
-                    src="https://maps.google.com/maps?q=2823/3%20Charoen%20Krung%20Road,%20Bang%20Kho%20Laem,%20Bangkok%2010120&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=13.6360728,100.4933795&t=&z=16&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0; border-radius: 1.25rem;" 
@@ -420,7 +428,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#151D2A] py-8 border-t border-white/5">
+    <footer class="bg-slate-900 py-8 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0 bg-white/90 p-2 rounded-lg">
                 <img src="logo.png" alt="OCTO NOTO Logo" class="h-8 w-auto object-contain">
