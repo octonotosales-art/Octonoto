@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="pkg_page_title">กล่องกระดาษและกล่องไดคัทพิมพ์ลายตามสั่ง | OCTO NOTO</title>
+    <!-- Tailwind CSS (CDN for standalone prototype) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#D4B87C',
+                            dark: '#A68241'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Sarabun', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', 'Sarabun', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <img src="logo.png" alt="OCTO NOTO Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-slate-600 hover:text-gold transition-colors font-medium flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        <span data-i18n="back_home">กลับสู่หน้าหลัก</span>
+                    </a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center bg-gray-100 rounded-full p-1 border border-gray-200">
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all active-lang" data-lang="en">EN</button>
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all text-gray-500" data-lang="th">TH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <div class="inline-flex items-center justify-center p-4 bg-slate-100 rounded-full mb-6">
+                    <i data-lucide="box" class="w-10 h-10 text-gold"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-6" data-i18n="pkg_title">
+                    กล่องกระดาษและกล่องไดคัทพิมพ์ลายตามสั่ง ตอบโจทย์ทุกบรรจุภัณฑ์แบรนด์คุณ
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto" data-i18n="pkg_intro">
+                    ยกระดับสินค้าและสร้างความน่าเชื่อถือให้กับแบรนด์ด้วยบริการผลิต กล่องกระดาษ และ กล่องไดคัท ตามขนาดและดีไซน์เฉพาะตัว รองรับการพิมพ์โลโก้หรือลวดลายตามความต้องการ (พิมพ์สีคมชัด หรือพิมพ์ดำสีเดียว) คัดสรรวัสดุกระดาษคุณภาพดี แข็งแรงทนทาน เหมาะสำหรับใส่สินค้า ผลิตภัณฑ์พรีเมียม และกล่องพัสดุ E-commerce พร้อมให้บริการด้วยความใส่ใจ ไม่มีขั้นต่ำในการสั่งผลิต
+                </p>
+            </div>
+
+            <!-- Features and Services -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12 mb-12">
+                <h2 class="text-2xl font-bold text-slate-900 border-l-4 border-gold pl-4 mb-8" data-i18n="pkg_features_title">ลักษณะเด่นและบริการของเรา</h2>
+                
+                <div class="space-y-8">
+                    <!-- Item 1 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">1</span>
+                            <span data-i18n="pkg_feat1_title">กล่องไดคัทและกล่องกระดาษสั่งทำตามขนาด (Custom Size)</span>
+                        </h3>
+                        <p class="pl-10 text-slate-600" data-i18n="pkg_feat1_desc">
+                            ออกแบบและตัดเย็บรูปทรงกล่องให้พอดีกับสินค้าของคุณ ช่วยประหยัดวัสดุกันกระแทก ดูเป็นมืออาชีพ และสร้างความประทับใจแรกพบเมื่อลูกค้าเปิดกล่อง (Unboxing Experience)
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">2</span>
+                            <span data-i18n="pkg_feat2_title">บริการพิมพ์โลโก้และลวดลายแบรนด์คุณ (Logo Printing)</span>
+                        </h3>
+                        <div class="pl-10 space-y-3 text-slate-600">
+                            <p data-i18n="pkg_feat2_p1">พิมพ์สีคมชัด: เหมาะสำหรับแบรนด์ที่ต้องการความโดดเด่น สีสันสวยงาม สมจริง ตรงตามCorporate Identity (CI)</p>
+                            <p data-i18n="pkg_feat2_p2">พิมพ์ดำสีเดียว (Single Color / Black): ให้ความรู้สึกเรียบหรู คลาสสิก มินิมอล และช่วยควบคุมต้นทุนการผลิตได้อย่างมีประสิทธิภาพ</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">3</span>
+                            <span data-i18n="pkg_feat3_title">ยืดหยุ่นด้วยเงื่อนไขที่ตอบโจทย์ธุรกิจ</span>
+                        </h3>
+                        <div class="pl-10 space-y-3 text-slate-600">
+                            <p data-i18n="pkg_feat3_p1">ไม่มีขั้นต่ำ (No Minimum Order): รองรับทั้งธุรกิจขนาดเล็ก (SMEs) ที่ต้องการทดลองตลาด หรือแบรนด์ใหญ่ที่ต้องการผลิตจำนวนจำกัด</p>
+                            <p data-i18n="pkg_feat3_p2">ระยะเวลาการผลิตที่รวดเร็ว: พร้อมส่งมอบงานคุณภาพภายใน 2 สัปดาห์ หลังจากที่ลูกค้าเปิดคำสั่งซื้อ (PO) และยืนยันความถูกต้องของแบบพิมพ์ (Artwork) เป็นที่เรียบร้อยแล้ว</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Trust Us -->
+            <div class="bg-slate-900 rounded-2xl shadow-xl p-8 md:p-12 mb-12 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-gold opacity-10 blur-3xl pointer-events-none"></div>
+                <h2 class="text-2xl font-bold border-l-4 border-gold pl-4 mb-8" data-i18n="pkg_why_title">ทำไมต้องเลือกใช้บริการกล่องบรรจุภัณฑ์ของเรา?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="star" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="pkg_why1_title">เสริมภาพลักษณ์แบรนด์</h4>
+                        <p class="text-sm text-gray-300" data-i18n="pkg_why1_desc">กล่องพิมพ์โลโก้ช่วยเพิ่มมูลค่าให้สินค้าดูพรีเมียมและเป็นมืออาชีพยิ่งขึ้น</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="check-circle" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="pkg_why2_title">คุ้มค่า ตรงสเปก</h4>
+                        <p class="text-sm text-gray-300" data-i18n="pkg_why2_desc">ผลิตตามขนาดที่ใช้งานจริง ลดพื้นที่จัดเก็บและลดความเสียหายระหว่างขนส่ง</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="zap" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="pkg_why3_title">บริการรวดเร็วและได้มาตรฐาน</h4>
+                        <p class="text-sm text-gray-300" data-i18n="pkg_why3_desc">ควบคุมคุณภาพการผลิตทุกขั้นตอน พร้อมจัดส่งตรงเวลา</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mb-16">
+                <p class="text-xl font-bold text-slate-900 mb-6" data-i18n="pkg_cta_text">ต้องการสั่งผลิตกล่องกระดาษพิมพ์โลโก้ตามขนาดของคุณ?</p>
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-900 bg-gold hover:bg-gold-light transition-all shadow-premium hover:shadow-lg hover:-translate-y-1">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    <span data-i18n="pkg_cta_btn">ติดต่อทีมงานเพื่อปรึกษาขนาดและประเมินราคา / ส่งแบบพิมพ์เพื่อขอใบเสนอราคา</span>
+                </a>
+            </div>
+
+            <!-- Image at the bottom -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                <img src="packaging-product.jpg" alt="Custom Packaging & Carton Boxes" class="w-full h-auto object-cover">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm" data-i18n="footer_copy">© 2026 OCTO NOTO CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Translation and Icons -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="vci_page_title">บรรจุภัณฑ์กันสนิมและอุปกรณ์ป้องกันไฟฟ้าสถิต | OCTO NOTO</title>
+    <!-- Tailwind CSS (CDN for standalone prototype) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#D4B87C',
+                            dark: '#A68241'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Sarabun', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles (for language buttons if any) -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', 'Sarabun', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <img src="logo.png" alt="OCTO NOTO Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+                    </a>
+                </div>
+                
+                <div class="flex items-center space-x-6">
+                    <a href="index.html" class="text-slate-600 hover:text-gold transition-colors font-medium flex items-center gap-2">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                        <span data-i18n="back_home">กลับสู่หน้าหลัก</span>
+                    </a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center bg-gray-100 rounded-full p-1 border border-gray-200">
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all active-lang" data-lang="en">EN</button>
+                        <button class="lang-btn px-3 py-1 rounded-full text-sm font-semibold transition-all text-gray-500" data-lang="th">TH</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Header -->
+            <div class="mb-12 text-center">
+                <div class="inline-flex items-center justify-center p-4 bg-slate-100 rounded-full mb-6">
+                    <i data-lucide="package" class="w-10 h-10 text-gold"></i>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 leading-tight mb-6" data-i18n="vci_title">
+                    โซลูชันบรรจุภัณฑ์กันสนิม ถุง VCI และวัสดุป้องกันไฟฟ้าสถิตมาตรฐานอุตสาหกรรม
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto" data-i18n="vci_intro">
+                    เราคือผู้เชี่ยวชาญด้านบรรจุภัณฑ์ป้องกันการกัดกร่อนและสนิมสำหรับภาคอุตสาหกรรม คัดสรรวัตถุดิบและ Master Roll เกรดพรีเมียมนำเข้าจากต่างประเทศ พร้อมให้บริการตัดแต่งตามขนาดและรูปแบบที่ลูกค้าต้องการ (Made-to-Order) เพื่อการปกป้องชิ้นส่วนโลหะและอิเล็กทรอนิกส์อย่างมีประสิทธิภาพสูงสุด
+                </p>
+            </div>
+
+            <!-- Products & Services Types -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 md:p-12 mb-12">
+                <h2 class="text-2xl font-bold text-slate-900 border-l-4 border-gold pl-4 mb-8" data-i18n="vci_types_title">ประเภทผลิตภัณฑ์และบริการของเรา</h2>
+                
+                <div class="space-y-8">
+                    <!-- Item 1 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">1</span>
+                            <span data-i18n="vci_type1_title">บรรจุภัณฑ์ป้องกันสนิมเทคโนโลยี VCI (VCI Anti-Rust Packaging)</span>
+                        </h3>
+                        <div class="pl-10 space-y-3 text-slate-600">
+                            <p data-i18n="vci_type1_p1">ถุงกันสนิม (VCI Bag): ถุงพลาสติกบรรจุภัณฑ์ผสมสารระเหยยับยั้งสนิม (Volatile Corrosion Inhibitor) ช่วยปกป้องชิ้นส่วนโลหะและเครื่องจักรไม่ให้เกิดสนิมระหว่างการจัดเก็บและการขนส่ง สะอาด ปลอดภัย ไม่ทิ้งคราบมันบนพื้นผิวชิ้นงาน</p>
+                            <p data-i18n="vci_type1_p2">กระดาษกันสนิม (VCI Paper): กระดาษห่อกันสนิมคุณภาพสูง เหมาะสำหรับการห่อหุ้มชิ้นส่วนยานยนต์ อะไหล่ และเครื่องมือกล</p>
+                            <p data-i18n="vci_type1_p3">บริการตัดตามขนาด: รับผลิตและตัดถุงกันสนิม กระดาษกันสนิม ตามขนาดและสเปกเฉพาะของลูกค้า เพื่อให้ใช้งานได้พอดีกับชิ้นงาน ลดขยะบรรจุภัณฑ์</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">2</span>
+                            <span data-i18n="vci_type2_title">ถุงกันไฟฟ้าสถิต (Anti-Static Bag)</span>
+                        </h3>
+                        <p class="pl-10 text-slate-600" data-i18n="vci_type2_desc">
+                            บรรจุภัณฑ์ป้องกันความเสียหายจากประจุไฟฟ้าสถิตสำหรับอุตสาหกรรมอิเล็กทรอนิกส์ แผงวงจร และอุปกรณ์ที่มีความอ่อนไหว ป้องกันความเสียหายตั้งแต่ต้นทางจนถึงมือผู้รับ
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span class="bg-gold text-white w-8 h-8 rounded-full flex items-center justify-center text-sm shrink-0">3</span>
+                            <span data-i18n="vci_type3_title">น้ำมันกันสนิมอุตสาหกรรม (Anti-Rust Oil)</span>
+                        </h3>
+                        <p class="pl-10 text-slate-600" data-i18n="vci_type3_desc">
+                            น้ำมันเคลือบป้องกันสนิมคุณภาพเยี่ยม ช่วยเคลือบผิวโลหะเพื่อป้องกันความชื้นและการเกิดออกซิเดชัน เหมาะสำหรับงานพักผิวชิ้นงานระหว่างรอประกอบหรือเก็บรักษาในระยะยาว
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Trust Us -->
+            <div class="bg-slate-900 rounded-2xl shadow-xl p-8 md:p-12 mb-12 text-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-gold opacity-10 blur-3xl pointer-events-none"></div>
+                <h2 class="text-2xl font-bold border-l-4 border-gold pl-4 mb-8" data-i18n="vci_why_title">จุดเด่นที่เราได้รับความไว้วางใจจากภาคอุตสาหกรรม</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="vci_why1_title">Raw Material คุณภาพสูง</h4>
+                        <p class="text-sm text-gray-300" data-i18n="vci_why1_desc">ใช้วัตถุดิบและ Master Roll นำเข้าจากต่างประเทศ มั่นใจได้ในมาตรฐานความทนทานและการปกป้อง</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="scissors" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="vci_why2_title">บริการตัดแต่งตามความต้องการ</h4>
+                        <p class="text-sm text-gray-300" data-i18n="vci_why2_desc">รองรับการผลิตตามขนาด (Custom Size) ที่ลูกค้าต้องการใช้งานจริง</p>
+                    </div>
+                    <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+                        <i data-lucide="truck" class="w-8 h-8 text-gold mb-4"></i>
+                        <h4 class="text-lg font-bold mb-2" data-i18n="vci_why3_title">ส่งมอบรวดเร็ว</h4>
+                        <p class="text-sm text-gray-300" data-i18n="vci_why3_desc">บริการจัดส่งสินค้าถึงมือลูกค้าภายใน 2 สัปดาห์ ช่วยให้สายการผลิตและการขนส่งของคุณดำเนินไปได้อย่างต่อเนื่อง</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mb-16">
+                <p class="text-xl font-bold text-slate-900 mb-6" data-i18n="vci_cta_text">ต้องการปรึกษาเรื่องบรรจุภัณฑ์กันสนิม หรือสั่งตัดตามขนาดพิเศษ?</p>
+                <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl text-slate-900 bg-gold hover:bg-gold-light transition-all shadow-premium hover:shadow-lg hover:-translate-y-1">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    <span data-i18n="vci_cta_btn">ติดต่อทีมงานฝ่ายขายเพื่อขอตัวอย่างสินค้า / ขอใบเสนอราคา</span>
+                </a>
+            </div>
+
+            <!-- Image at the bottom -->
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
+                <img src="vci-product.jpg" alt="VCI Products and Custom Packaging" class="w-full h-auto object-cover">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400 text-sm" data-i18n="footer_copy">© 2026 OCTO NOTO CO., LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts for Translation and Icons -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

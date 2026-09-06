@@ -14,27 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'en';
 
     // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 20) {
-            navbar.classList.add('scrolled-nav');
-            navbar.classList.add('py-2');
-        } else {
-            navbar.classList.remove('scrolled-nav');
-            navbar.classList.remove('py-2');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('scrolled-nav');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('scrolled-nav');
+                navbar.classList.remove('py-2');
+            }
+        });
+    }
 
     // Mobile Menu Toggle
-    mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu on link click
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-    });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
 
     // Language Switcher Logic
     function setLanguage(lang) {
