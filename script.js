@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                     el.placeholder = translations[lang][key];
                 } else {
-                    el.textContent = translations[lang][key];
+                    el.innerHTML = translations[lang][key];
                 }
             }
         });
@@ -167,4 +167,59 @@ document.addEventListener('DOMContentLoaded', () => {
             contactForm.classList.remove('hidden');
         });
     }
+
+    // Lightbox Logic for Product Images
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 transition-opacity duration-300';
+    
+    const lightboxImg = document.createElement('img');
+    lightboxImg.className = 'max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300';
+    lightbox.appendChild(lightboxImg);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'absolute top-6 right-6 text-white hover:text-gold transition-colors';
+    closeBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+    lightbox.appendChild(closeBtn);
+
+    document.body.appendChild(lightbox);
+
+    // Target all images except logos and QR codes
+    const zoomableImages = document.querySelectorAll('img:not([src="logo.png"]):not([src="catalogue-qr.jpg"]):not([src="line-qr.jpg"])');
+    
+    zoomableImages.forEach(img => {
+        img.classList.add('cursor-zoom-in', 'transition-transform', 'hover:opacity-90');
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            void lightbox.offsetWidth; // Trigger reflow
+            lightbox.classList.remove('opacity-0');
+            lightboxImg.classList.remove('scale-95');
+            lightboxImg.classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.add('opacity-0');
+        lightboxImg.classList.remove('scale-100');
+        lightboxImg.classList.add('scale-95');
+        setTimeout(() => {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = '';
+        }, 300);
+    };
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target !== lightboxImg) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+            closeLightbox();
+        }
+    });
 });
